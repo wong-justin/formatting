@@ -17,6 +17,7 @@ import sys
 
 INDENT_SIZE = 4
 INDENT = ' ' * INDENT_SIZE
+AUTHOR = 'Justin Wong'
 
 def format_python(pyfile):
     '''Main method reads lines and creates docstrings for functions, classes.
@@ -60,7 +61,7 @@ def top_doc():
     today = datetime.now().strftime('%Y-%m-%d')
     s = f"""'''#TODO
 
-Justin Wong
+{AUTHOR}
 {today}
 '''
 
@@ -163,7 +164,7 @@ def rund_from_cmd_line():
     if filepath[-3:] == '.py':
         format_python(filepath)
     else:
-        print('Error - not a .py file')
+        print('Error: not a .py file')
         
 if __name__ == '__main__':
     rund_from_cmd_line()
